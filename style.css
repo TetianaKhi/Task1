@@ -77,31 +77,6 @@ variables are available to be used anywhere in our html document
     color: var(--color2);
 }
 
-/* .team-member-card {
-    min-height: 32em;
-    background-color: var(--color3);
-    display: flex;
-    flex-direction: column;
-    border-radius: 1em;
-    overflow: hidden;
-}
-
-.team-member-card-image {
-    max-width: 100%;
-}
-
-.team-member-card-blurb {
-    padding: 1em;
-}
-
-.our-clients-title {
-    background-color: var(--color2);
-    color: var(--color4);
-    font-size: 3em;
-    text-align: center;
-    padding: 0.5em;
-    border-radius: 1em;
-}
 
 .client-icon {
     width: 100%;
@@ -206,12 +181,90 @@ Because this CSS definition comes first, it will apply by default. Then we overr
 media queries for progressively bigger screen widths
 */
 .main-container {
-    /* grid-template for phone */
+    grid-template:
+    "ban1 ban1 ban1 ban1" minmax(4em, auto)
+    " .    .    .    .  " minmax(4em, auto)
+    "intr intr intr intr" minmax(22em, auto)
+    " .    .    .    .  " minmax(4em, auto)
+    " .  pp1a  pp1a  .  " minmax(8em, auto)
+    " .    .    .    .  " minmax(4em, auto)
+    "ptx1 ptx1 ptx1 ptx1" minmax(10em, auto)
+    " .    .    .    .  " minmax(4em, auto)
+    " .  pp2a  pp2a  .  " minmax(8em, auto)
+    " .    .    .    .  " minmax(2em, auto)
+    " .  pp2b  pp2b  .  " minmax(8em, auto)
+    " .    .    .    .  " minmax(4em, auto)
+    "ptx2 ptx2 ptx2 ptx2" minmax(8em, auto)
+    " .    .    .    .  " minmax(4em, auto)
+    " .  pp3a  pp3a  .  " minmax(10em, auto)
+    " .    .    .    .  " minmax(2em, auto)
+    " .  pp3b  pp3b  .  " minmax(8em, auto)
+    " .    .    .    .  " minmax(4em, auto)
+    "ptx3 ptx3 ptx3 ptx3" minmax(8em, auto)
+    " .    .    .    .  " minmax(4em, auto)
+    " .  pp4a  pp4a  .  " minmax(10em, auto)
+    " .    .    .    .  " minmax(2em, auto)
+    " .  pp4b  pp4b  .  " minmax(10em, auto)
+    " .    .    .    .  " minmax(4em, auto)
+    "ptx4 ptx4 ptx4 ptx4" minmax(10em, auto)
+    " .    .    .    .  " minmax(4em, auto)
+    "pp5a pp5a pp5a pp5a" minmax(10em, auto)
+    " .    .    .    .  " minmax(4em, auto)
+    "ptx5 ptx5 ptx5 ptx5" minmax(10em, auto)
+    " .    .    .    .  " minmax(4em, auto)
+    "pp6a pp6a pp6a pp6a" minmax(8em, auto)
+    " .    .    .    .  " minmax(4em, auto)
+    "ptx6 ptx6 ptx6 ptx6" minmax(12em, auto)
+    " .    .    .    .  " minmax(4em, auto)
+    " .   pp7a pp7a  .  " minmax(12em, auto)
+    " .    .    .    .  " minmax(4em, auto)
+    "ptx7 ptx7 ptx7 ptx7" minmax(12em, auto)
+    " .    .    .    .  " minmax(4em, auto)
+    "cncl cncl cncl cncl" minmax(6em, auto)
+    " .    .    .    .  " minmax(4em, auto)
+    "rfrn rfrn rfrn rfrn" minmax(18em, auto)
+
 }
     
-@media (min-width: 50em) {
-       .main-container {
-        /* grid-template for table */
+@media (min-width: 75em) {
+    .main-container {
+        grid-template:
+        "ban1 ban1 ban1 ban1 ban1 ban1 ban1 ban1" minmax(4em, auto)
+        " .    .    .     .    .    .    .    . " minmax(2em, auto)
+        "intr intr intr intr intr intr intr intr" minmax(20em, auto)
+        " .    .    .     .    .    .    .    . " minmax(4em, auto)
+        " .  pp1a  pp1a pp1a pp1a pp1a pp1a   . " minmax(14em, auto)
+        " .    .    .     .    .    .    .    . " minmax(2em, auto)
+        "ptx1 ptx1 ptx1 ptx1 ptx1 ptx1 ptx1 ptx1" minmax(8em, auto)
+        " .    .    .     .    .    .    .    . " minmax(6em, auto)
+        " .  pp2a  pp2a pp2a pp2b  pp2b pp2b  . " minmax(12em, auto)
+        " .    .    .     .    .    .    .    . " minmax(4em, auto)
+        "ptx2 ptx2 ptx2 ptx2 ptx2 ptx2 ptx2 ptx2" minmax(8em, auto)
+        " .    .    .     .    .    .    .    . " minmax(4em, auto)
+        " .  pp3a  pp3a pp3a pp3b  pp3b pp3b  . " minmax(12em, auto)
+        " .    .    .     .    .    .    .    . " minmax(2em, auto)
+        "ptx3 ptx3 ptx3 ptx3 ptx3 ptx3 ptx3 ptx3" minmax(8em, auto)
+        " .    .    .     .    .    .    .    . " minmax(4em, auto)
+        " .  pp4a  pp4a pp4a pp4b  pp4b pp4b  . " minmax(12em, auto)
+        " .    .    .     .    .    .    .    . " minmax(2em, auto)
+        "ptx4 ptx4 ptx4 ptx4 ptx4 ptx4 ptx4 ptx4" minmax(8em, auto)
+        " .    .    .     .    .    .    .    . " minmax(4em, auto)
+        " .  pp5a  pp5a pp5a pp5a  pp5a pp5a  . " minmax(12em, auto)
+        " .    .    .     .    .    .    .    . " minmax(2em, auto)
+        "ptx5 ptx5 ptx5 ptx5 ptx5 ptx5 ptx5 ptx5" minmax(8em, auto)
+        " .    .    .     .    .    .    .    . " minmax(4em, auto)
+        " .  pp6a  pp6a pp6a pp6a  pp6a pp6a  . " minmax(12em, auto)
+        " .    .    .     .    .    .    .    . " minmax(2em, auto)
+        "ptx6 ptx6 ptx6 ptx6 ptx6 ptx6 ptx6 ptx6" minmax(10em, auto)
+        " .    .    .     .    .    .    .    . " minmax(4em, auto)
+        " .  pp7a  pp7a pp7a pp7a  pp7a pp7a  . " minmax(14em, auto)
+        " .    .    .     .    .    .    .    . " minmax(2em, auto)
+        "ptx7 ptx7 ptx7 ptx7 ptx7 ptx7 ptx7 ptx7" minmax(10em, auto)
+        " .    .    .     .    .    .    .    . " minmax(2em, auto)
+        "cncl cncl cncl cncl cncl cncl cncl cncl" minmax(8em, auto)
+        " .    .    .     .    .    .    .    . " minmax(2em, auto)
+        "rfrn rfrn rfrn rfrn rfrn rfrn rfrn rfrn" minmax(16em, auto)
+        
     }
 }
 
