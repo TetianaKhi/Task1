@@ -1,94 +1,245 @@
+/* 
+Color pallete. This section defines variables for the color pallete,
+so that we can refer to particular colors by name instead of hexadecimal values.
+This is applied to the 'root' psuedo-element, which just means that these color
+variables are available to be used anywhere in our html document
+*/
 :root {
-  --dl-color-gray-500: #595959;
-  --dl-color-gray-700: #999999;
-  --dl-color-gray-900: #D9D9D9;
-  --dl-size-size-large: 144px;
-  --dl-size-size-small: 48px;
-  --dl-color-danger-300: #A22020;
-  --dl-color-danger-500: #BF2626;
-  --dl-color-danger-700: #E14747;
-  --dl-color-gray-black: #000000;
-  --dl-color-gray-white: #FFFFFF;
-  --dl-size-size-medium: 96px;
-  --dl-size-size-xlarge: 192px;
-  --dl-size-size-xsmall: 16px;
-  --dl-space-space-unit: 16px;
-  --dl-color-primary-100: #003EB3;
-  --dl-color-primary-300: #0074F0;
-  --dl-color-primary-500: #14A9FF;
-  --dl-color-primary-700: #85DCFF;
-  --dl-color-success-300: #199033;
-  --dl-color-success-500: #32A94C;
-  --dl-color-success-700: #4CC366;
-  --dl-size-size-xxlarge: 288px;
-  --dl-size-size-maxwidth: 1400px;
-  --dl-radius-radius-round: 50%;
-  --dl-space-space-halfunit: 8px;
-  --dl-space-space-sixunits: 96px;
-  --dl-space-space-twounits: 32px;
-  --dl-radius-radius-radius2: 2px;
-  --dl-radius-radius-radius4: 4px;
-  --dl-radius-radius-radius8: 8px;
-  --dl-space-space-fiveunits: 80px;
-  --dl-space-space-fourunits: 64px;
-  --dl-space-space-threeunits: 48px;
-  --dl-space-space-oneandhalfunits: 24px;
+    --color1: #0D0A0B;
+    --color2: #454955;
+    --color3: #F3EFF5;
+    --white-font: #FFFFFF;
+    --black-font: #000000;
 }
-.button {
-  color: var(--dl-color-gray-black);
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-color: var(--dl-color-gray-black);
-  border-width: 1px;
-  border-radius: 4px;
-  background-color: var(--dl-color-gray-white);
+
+/* Defines the main container size, we are limiting to 1140px max and centring in the viewport */
+.main-container {
+    max-width: 72em;
+    margin: 0 auto;
+    font-family: Inter;
+    color: var(--color3);
 }
-.input {
-  color: var(--dl-color-gray-black);
-  cursor: auto;
-  padding: 0.5rem 1rem;
-  border-color: var(--dl-color-gray-black);
-  border-width: 1px;
-  border-radius: 4px;
-  background-color: var(--dl-color-gray-white);
+
+/* Here we define the aspects of style of our elements other than their grid layout */
+.banner {
+    background-color: var(--color1);
+    min-height: 8em;
+    padding: 1em;
 }
-.textarea {
-  color: var(--dl-color-gray-black);
-  cursor: auto;
-  padding: 0.5rem;
-  border-color: var(--dl-color-gray-black);
-  border-width: 1px;
-  border-radius: 4px;
-  background-color: var(--dl-color-gray-white);
+
+.banner-title {
+    font-size: 3em;
 }
-.list {
-  width: 100%;
-  margin: 1em 0px 1em 0px;
-  display: block;
-  padding: 0px 0px 0px 1.5rem;
-  list-style-type: none;
-  list-style-position: outside;
+
+.banner-subtitle {
+    font-size: 2em;
+    padding-left: 0.125rem;
+    padding-top: 0.25rem;
 }
-.list-item {
-  display: list-item;
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    background-color: #F3EFF5;
 }
-.teleport-show {
-  display: flex !important;
-  transform: none !important;
+
+.part-text {
+    background-color: #454955;
+    font-size: 1em;
+    padding: 1em;
 }
-.Content {
-  font-size: 16px;
-  font-family: Inter;
-  font-weight: 400;
-  line-height: 1.15;
-  text-transform: none;
-  text-decoration: none;
+
+.part-text-title {
+    font-size: 1.5em;
 }
-.Heading {
-  font-size: 32px;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: 1.15;
-  text-transform: none;
-  text-decoration: none;
+
+.part-pic { 
+    max-width: 100%;
+}
+
+.conclusion {
+    background-color: var(--color3);
+    color: var(--color2);
+    font-size: 3em;
+    text-align: center;
+    padding: 1.5em;
+}
+
+.referencing-title {
+        font-size: 0,75em;
+        font-family: Inter;
+        color: var(--color2);
+}
+
+.referencing-body {
+    font-size: 0,5em;
+    font-family: Inter;
+    color: var(--color2);
+}
+
+/* .team-member-card {
+    min-height: 32em;
+    background-color: var(--color3);
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.team-member-card-image {
+    max-width: 100%;
+}
+
+.team-member-card-blurb {
+    padding: 1em;
+}
+
+.our-clients-title {
+    background-color: var(--color2);
+    color: var(--color4);
+    font-size: 3em;
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 1em;
+}
+
+.client-icon {
+    width: 100%;
+} */
+
+/* now we create names for the grid areas for specific elements */
+#banner {
+    grid-area: ban1;
+}
+
+#intro {
+    grid-area: intr;
+}
+
+#part-pic-1 {
+    grid-area: pp1a;
+}
+
+#part-pic-2a {
+    grid-area: pp2a;
+}
+
+#part-pic-2b {
+    grid-area: pp2b;
+}
+
+
+#part-text-1 {
+    grid-area: ptx1;
+}
+
+#part-text-2 {
+    grid-area: ptx2;
+}
+
+#part-pic-3a {
+    grid-area: pp3a;
+}
+
+#part-pic-3b {
+    grid-area: pp3b;
+}
+
+#part-text-3 {
+    grid-area: ptx3;
+}
+#part-pic-4a {
+    grid-area: pp4a;
+}
+
+#part-pic-4b {
+    grid-area: pp4b;
+}
+
+#part-text-4 {
+    grid-area: ptx4;
+}
+
+#part-pic-5a {
+    grid-area: pp5a;
+}
+
+#part-text-5 {
+    grid-area: ptx5;
+}
+
+#part-pic-6a {
+    grid-area: pp6a;
+}
+
+#part-text-6 {
+    grid-area: ptx6;
+}
+
+#part-pic-7a {
+    grid-area: pp7a;
+}
+
+#part-text-7 {
+    grid-area: ptx7;
+}
+
+#conclusion {
+    grid-area: cncl;
+}
+
+#referencing {
+    grid-area: rfrn;
+}
+
+
+/* Use a flexible layout grid */
+.main-container {
+    display: grid;
+    column-gap: 1em;
+}
+  
+/* 
+Responsive Layout breakpoints. We start 'mobile-first' i.e. we define how the layout should look
+for the smallest screen sizes. In this case we want a single column that spans the main container.
+Because this CSS definition comes first, it will apply by default. Then we override it below with 
+media queries for progressively bigger screen widths
+*/
+.main-container {
+    /* grid-template for phone */
+}
+    
+@media (min-width: 50em) {
+       .main-container {
+        /* grid-template for table */
+    }
+}
+
+@media (min-width: 75em) {
+    .main-container {
+        grid-template:
+        "ban1 ban1 ban1 ban1 ban1 ban1 ban1 ban1 ban1 ban1 ban1 ban1" minmax(8em, auto)
+        " .    .    .    .    .    .    .    .    .    .    .    . "  minmax(2em, auto)
+        "intr intr intr intr intr intr intr intr intr intr intr intr" minmax(48em, auto)
+        " .    .    .    .    .    .    .    .    .    .    .    . "  minmax(6em, auto)
+        "pp1a pp1a pp1a pp1a pp1a pp1a ptx1 ptx1 ptx1 ptx1 ptx1 ptx1" minmax(20em, auto)
+        " .    .    .    .    .    .    .    .    .    .    .    . "  minmax(6em, auto)
+        "pp2a pp2a pp2a pp2b pp2b pp2b ptx2 ptx2 ptx2 ptx2 ptx2 ptx2" minmax(14em, auto)
+        " .    .    .    .    .    .    .    .    .    .    .    . "  minmax(6em, auto)
+        "pp3a pp3a pp3a pp3b pp3b pp3b ptx3 ptx3 ptx3 ptx3 ptx3 ptx3" minmax(12em, auto)
+        " .    .    .    .    .    .    .    .    .    .    .    . "  minmax(6em, auto)
+        "pp4a pp4a pp4a pp4b pp4b pp4b ptx4 ptx4 ptx4 ptx4 ptx4 ptx4" minmax(14em, auto)
+        " .    .    .    .    .    .    .    .    .    .    .    . "  minmax(6em, auto)
+        "pp5a pp5a pp5a pp5a pp5a pp5a ptx5 ptx5 ptx5 ptx5 ptx5 ptx5" minmax(16em, auto)
+        " .    .    .    .    .    .    .    .    .    .    .    . "  minmax(4em, auto)
+        "pp6a pp6a pp6a pp6a pp6a pp6a ptx6 ptx6 ptx6 ptx6 ptx6 ptx6" minmax(16em, auto)
+        " .    .    .    .    .    .    .    .    .    .    .    . "  minmax(4em, auto)
+        "pp7a pp7a pp7a pp7a pp7a pp7a ptx7 ptx7 ptx7 ptx7 ptx7 ptx7" minmax(18em, auto)
+        " .    .    .    .    .    .    .    .    .    .    .    . "  minmax(4em, auto)
+        "cncl cncl cncl cncl cncl cncl cncl cncl cncl cncl cncl cncl" minmax(8em, auto)
+        " .    .    .    .    .    .    .    .    .    .    .    . "  minmax(4em, auto)
+        "rfrn rfrn rfrn rfrn rfrn rfrn rfrn rfrn rfrn rfrn rfrn rfrn" minmax(12em, auto)
+
+    
+    }
 }
